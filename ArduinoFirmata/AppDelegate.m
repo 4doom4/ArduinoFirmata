@@ -29,7 +29,6 @@
     
     NSURL *arduinoPath = [applicationsFolder URLByAppendingPathComponent:@"Arduino.aspp"];
     
-    
     if ([fileManager fileExistsAtPath:[arduinoPath path]]) {
         [[NSWorkspace sharedWorkspace] launchApplication:[arduinoPath path]];
     }
@@ -50,8 +49,7 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
-    
+    // Insert code here to initialize your application    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
