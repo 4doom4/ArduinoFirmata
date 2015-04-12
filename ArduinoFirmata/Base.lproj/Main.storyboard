@@ -655,14 +655,32 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="D93C3DAC-C0CF-418F-BA17-B19C1551D0A7" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="p7K-ik-sv0">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="rBg-Zo-8Ck"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="J8w-Xv-6Jv"/>
+                                <toolbarItem implicitItemIdentifier="D94ADF6A-A5AE-47D1-9DF4-BE20436A9DFB" label="Arduino IDE" paletteLabel="Arduino IDE" toolTip="lll" tag="-1" image="arduino_icon" id="Qte-8M-QkG">
+                                    <connections>
+                                        <action selector="toolbarArduinoIDEButton:" target="Ld0-dV-QRU" id="AyL-kw-Eb4"/>
+                                    </connections>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="Qte-8M-QkG"/>
+                                <toolbarItem reference="J8w-Xv-6Jv"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="Ld0-dV-QRU" customClass="ToolbarController"/>
-                <customObject id="k98-GK-G5f" customClass="AppDelegate"/>
+                <customObject id="Ld0-dV-QRU" customClass="AppDelegate">
+                    <connections>
+                        <outlet property="toolbarArduinoIDEOutlet" destination="Qte-8M-QkG" id="77y-2u-X76"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
@@ -720,4 +738,7 @@
             <point key="canvasLocation" x="75" y="771.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arduino_icon" width="512" height="512"/>
+    </resources>
 </document>

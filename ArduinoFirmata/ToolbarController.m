@@ -11,4 +11,7 @@
 @implementation ToolbarController
 
 
+- (IBAction)toolbarArduinoIDEButton:(id)sender {
+    [[NSWorkspace sharedWorkspace] launchApplication:@"/Applications/Safari.app"];
+}
 @end

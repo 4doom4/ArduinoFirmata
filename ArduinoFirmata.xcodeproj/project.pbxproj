@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		91D7E0FF1ADA12C4001FED26 /* arduino_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 91D7E0FE1ADA12C4001FED26 /* arduino_icon.icns */; };
 		91D7E1031ADA132F001FED26 /* ToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D7E1021ADA132F001FED26 /* ToolbarController.m */; };
+		91DBE6F61ADA30E80041A3B7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91DBE6F51ADA30E80041A3B7 /* Localizable.strings */; };
 		91F1F20A1ADA0B8900BC4F94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F1F2091ADA0B8900BC4F94 /* AppDelegate.m */; };
 		91F1F20C1ADA0B8900BC4F94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F1F20B1ADA0B8900BC4F94 /* main.m */; };
 		91F1F20F1ADA0B8900BC4F94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F1F20E1ADA0B8900BC4F94 /* ViewController.m */; };
@@ -32,6 +33,8 @@
 		91D7E0FE1ADA12C4001FED26 /* arduino_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = arduino_icon.icns; path = ArduinoFirmata/arduino_icon.icns; sourceTree = "<group>"; };
 		91D7E1011ADA132F001FED26 /* ToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarController.h; sourceTree = "<group>"; };
 		91D7E1021ADA132F001FED26 /* ToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarController.m; sourceTree = "<group>"; };
+		91DBE6F51ADA30E80041A3B7 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		91DBE6F71ADA34AD0041A3B7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		91F1F2031ADA0B8900BC4F94 /* ArduinoFirmata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArduinoFirmata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F1F2071ADA0B8900BC4F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91F1F2081ADA0B8900BC4F94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 				91D7E1001ADA12D9001FED26 /* Images */,
 				91F1F2081ADA0B8900BC4F94 /* AppDelegate.h */,
 				91F1F2091ADA0B8900BC4F94 /* AppDelegate.m */,
+				91DBE6F51ADA30E80041A3B7 /* Localizable.strings */,
 				91F1F20D1ADA0B8900BC4F94 /* ViewController.h */,
 				91F1F20E1ADA0B8900BC4F94 /* ViewController.m */,
 				91F1F2101ADA0B8900BC4F94 /* Images.xcassets */,
@@ -219,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91D7E0FF1ADA12C4001FED26 /* arduino_icon.icns in Resources */,
+				91DBE6F61ADA30E80041A3B7 /* Localizable.strings in Resources */,
 				91F1F2111ADA0B8900BC4F94 /* Images.xcassets in Resources */,
 				91F1F2141ADA0B8900BC4F94 /* Main.storyboard in Resources */,
 			);
@@ -269,6 +274,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				91F1F2131ADA0B8900BC4F94 /* Base */,
+				91DBE6F71ADA34AD0041A3B7 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

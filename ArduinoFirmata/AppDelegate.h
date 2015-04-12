@@ -10,7 +10,9 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-- (IBAction)test:(id)sender;
+- (IBAction)toolbarArduinoIDEButton:(id)sender;
+
+@property (weak) IBOutlet NSToolbarItem *toolbarArduinoIDEOutlet;
 
 @end
 

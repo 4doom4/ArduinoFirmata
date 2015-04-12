@@ -10,5 +10,7 @@
 
 @interface ToolbarController : NSObject
 
+@property (weak) IBOutlet NSToolbarItem *toolbarArduinoIDEButton;
+- (IBAction)toolbarArduinoIDEButton:(id)sender;
 
 @end
