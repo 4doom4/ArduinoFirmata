@@ -664,9 +664,9 @@
                                         <action selector="toolbarArduinoIDEButton:" target="Ld0-dV-QRU" id="AyL-kw-Eb4"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="3BB47E32-0395-463B-98B8-1E9A5D9BFE14" explicitItemIdentifier="toolbarbutton" label="Toolbar Item" paletteLabel="Toolbar Item" tag="-1" image="NSApplicationIcon" id="uE6-Ij-LMc">
+                                <toolbarItem implicitItemIdentifier="3BB47E32-0395-463B-98B8-1E9A5D9BFE14" label="Toolbar Item" paletteLabel="Toolbar Item" tag="-1" image="NSApplicationIcon" id="uE6-Ij-LMc">
                                     <connections>
-                                        <action selector="toolbarArduinoIDEButton1:" target="7u4-wO-Z3M" id="B40-Uv-AbY"/>
+                                        <action selector="randomToolbarItem:" target="7u4-wO-Z3M" id="wxp-wC-x8t"/>
                                     </connections>
                                 </toolbarItem>
                             </allowedToolbarItems>
@@ -682,11 +682,7 @@
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="Ld0-dV-QRU" customClass="AppDelegate">
-                    <connections>
-                        <outlet property="toolbarArduinoIDEOutlet" destination="Qte-8M-QkG" id="77y-2u-X76"/>
-                    </connections>
-                </customObject>
+                <customObject id="Ld0-dV-QRU" customClass="AppDelegate"/>
                 <customObject id="7u4-wO-Z3M" customClass="ToolbarController"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
@@ -696,7 +692,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="682" height="491"/>
+                        <rect key="frame" x="0.0" y="0.0" width="434" height="491"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Iiy-P4-gMv">
@@ -732,8 +728,214 @@
                                 <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                                 <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </box>
+                            <box autoresizesSubviews="NO" fixedFrame="YES" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="HPy-zJ-JZ2">
+                                <rect key="frame" x="1" y="8" width="431" height="433"/>
+                                <view key="contentView">
+                                    <rect key="frame" x="1" y="1" width="429" height="417"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WYM-AS-R65">
+                                            <rect key="frame" x="16" y="364" width="46" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Port 1:" id="fQy-4f-Fhu">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kCi-Hl-oUo">
+                                            <rect key="frame" x="16" y="390" width="46" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Port 0:" id="C1o-Uc-31C">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2rM-3w-nPR">
+                                            <rect key="frame" x="16" y="187" width="55" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Port A0:" id="Wg0-KR-sv9">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LdZ-2V-gy1">
+                                            <rect key="frame" x="178" y="389" width="120" height="18"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="cellSize" width="41" height="18"/>
+                                            <size key="intercellSpacing" width="4" height="2"/>
+                                            <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="8Vv-Ul-gGi">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <cells>
+                                                <column>
+                                                    <buttonCell type="radio" title="On" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="VdZ-NU-aQk">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                </column>
+                                                <column>
+                                                    <buttonCell type="radio" title="Off" imagePosition="left" alignment="left" inset="2" id="iRb-FX-qZV">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                </column>
+                                            </cells>
+                                        </matrix>
+                                        <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6qj-Hl-Kmu">
+                                            <rect key="frame" x="178" y="186" width="120" height="18"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="cellSize" width="41" height="18"/>
+                                            <size key="intercellSpacing" width="4" height="2"/>
+                                            <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="rDN-pz-Erk">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <cells>
+                                                <column>
+                                                    <buttonCell type="radio" title="On" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="dpa-bn-W52">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                </column>
+                                                <column>
+                                                    <buttonCell type="radio" title="Off" imagePosition="left" alignment="left" inset="2" id="QMK-Aw-e3C">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                </column>
+                                            </cells>
+                                        </matrix>
+                                        <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-Oz-qDS">
+                                            <rect key="frame" x="178" y="364" width="120" height="18"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="cellSize" width="41" height="18"/>
+                                            <size key="intercellSpacing" width="4" height="2"/>
+                                            <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" enabled="NO" inset="2" id="qtS-d0-fpz">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <cells>
+                                                <column>
+                                                    <buttonCell type="radio" title="On" imagePosition="left" alignment="left" enabled="NO" state="on" tag="1" inset="2" id="yF0-2i-0HG">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                </column>
+                                                <column>
+                                                    <buttonCell type="radio" title="Off" imagePosition="left" alignment="left" enabled="NO" inset="2" id="guB-VI-Tfs">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                </column>
+                                            </cells>
+                                        </matrix>
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PNp-FU-5Ai">
+                                            <rect key="frame" x="68" y="385" width="100" height="26"/>
+                                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="kpf-Hg-t5Q" id="h7o-yP-msz">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" id="pNY-94-L4K">
+                                                    <items>
+                                                        <menuItem title="Item 1" state="on" id="kpf-Hg-t5Q"/>
+                                                        <menuItem title="Item 2" id="hW5-7j-8Xz"/>
+                                                        <menuItem title="Item 3" id="xR4-Dk-xaT"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <action selector="popUpButtonPortSelected:" target="XfG-lQ-9wD" id="qzQ-wE-0GM"/>
+                                            </connections>
+                                        </popUpButton>
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOA-8x-pha">
+                                            <rect key="frame" x="68" y="359" width="100" height="26"/>
+                                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="pw8-oN-tzr" id="6bB-kE-xJ7">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" id="S5p-JW-Ch6">
+                                                    <items>
+                                                        <menuItem title="Item 1" state="on" id="pw8-oN-tzr"/>
+                                                        <menuItem title="Item 2" id="rhR-Wd-mBN"/>
+                                                        <menuItem title="Item 3" id="w0k-sG-z7u"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <action selector="popUpButtonPortSelected:" target="XfG-lQ-9wD" id="3U0-Ad-swe"/>
+                                            </connections>
+                                        </popUpButton>
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UeH-7E-Yzw">
+                                            <rect key="frame" x="68" y="333" width="100" height="26"/>
+                                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Bnz-eJ-BGA" id="19j-1E-Fgc">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" id="WEw-6t-uwI">
+                                                    <items>
+                                                        <menuItem title="Item 1" state="on" id="Bnz-eJ-BGA"/>
+                                                        <menuItem title="Item 2" id="KzE-So-DfS"/>
+                                                        <menuItem title="Item 3" id="WYe-1a-DAz"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                            <connections>
+                                                <action selector="popUpButtonPortSelected:" target="XfG-lQ-9wD" id="A0e-Ou-6g0"/>
+                                            </connections>
+                                        </popUpButton>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j0g-di-e8h">
+                                            <rect key="frame" x="16" y="338" width="46" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Port 2:" id="WMs-vi-vUH">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88R-nS-f2d">
+                                            <rect key="frame" x="179" y="336" width="95" height="25"/>
+                                            <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="below" numberOfTickMarks="4" sliderType="linear" id="fJt-Mk-vkd"/>
+                                        </slider>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MpT-Xt-m7F">
+                                            <rect key="frame" x="282" y="344" width="68" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Value: 186" id="30H-zd-Dg7">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e3g-dS-r4W">
+                                            <rect key="frame" x="282" y="187" width="63" height="17"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Reading: " id="dYp-h2-To1">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pC3-Ob-6mP">
+                                            <rect key="frame" x="68" y="182" width="100" height="26"/>
+                                            <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="3Fu-lc-iso" id="MD1-uE-Smh">
+                                                <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="menu"/>
+                                                <menu key="menu" id="YIb-MR-tBA">
+                                                    <items>
+                                                        <menuItem title="Item 1" state="on" id="3Fu-lc-iso"/>
+                                                        <menuItem title="Item 2" id="beb-Rh-mJf"/>
+                                                        <menuItem title="Item 3" id="z0d-Jy-VoM"/>
+                                                    </items>
+                                                </menu>
+                                            </popUpButtonCell>
+                                        </popUpButton>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </box>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="popUpButtonPort0" destination="PNp-FU-5Ai" id="6R1-63-Le8"/>
+                        <outlet property="popUpButtonPort1" destination="eOA-8x-pha" id="Qmt-yZ-Ztx"/>
+                        <outlet property="popUpButtonPort2" destination="UeH-7E-Yzw" id="as2-3T-9vJ"/>
+                        <outlet property="radioPort0" destination="LdZ-2V-gy1" id="AuN-SR-mDX"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customObject id="ZpZ-ue-D8y" customClass="SerialConnection">
@@ -742,7 +944,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="75" y="771.5"/>
+            <point key="canvasLocation" x="-49" y="771.5"/>
         </scene>
     </scenes>
     <resources>

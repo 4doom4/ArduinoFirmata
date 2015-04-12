@@ -15,6 +15,7 @@
     [self refreshSerialList:@"Select Serial Port"];
 }
 
+
 - (void) refreshSerialList: (NSString *) selectedText {
     io_object_t serialPort;
     io_iterator_t serialPortIterator;

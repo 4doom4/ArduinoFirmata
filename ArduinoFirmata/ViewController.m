@@ -10,9 +10,34 @@
 
 @implementation ViewController
 
+- (void) addPropertyToPopUpButton: (NSPopUpButton *) buttonName; {
+    [buttonName removeAllItems];
+    
+    // add the selected text to the top
+    [buttonName insertItemWithTitle:@"Output" atIndex:0];
+    [buttonName insertItemWithTitle:@"Input" atIndex:1];
+    [buttonName insertItemWithTitle:@"Analog" atIndex:2];
+    [buttonName selectItemAtIndex:0];
+}
+
+- (IBAction)popUpButtonPortSelected:(id)sender {
+    NSLog(@"%@", [sender titleOfSelectedItem]);
+    if ([[sender titleOfSelectedItem] isEqualToString: @"Input"]) {
+        [_radioPort0 setEnabled:NO];
+    }
+    else if ([[sender titleOfSelectedItem] isEqualToString: @"Output"]) {
+        [_radioPort0 setEnabled:YES];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    // How to do this in loop ?!
+    [self addPropertyToPopUpButton: _popUpButtonPort0];
+    [self addPropertyToPopUpButton: _popUpButtonPort1];
+    [self addPropertyToPopUpButton: _popUpButtonPort2];
+    
     // Do any additional setup after loading the view.
 }
 

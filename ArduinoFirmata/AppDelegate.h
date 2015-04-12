@@ -8,11 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, NSUserInterfaceValidations>
 
 - (IBAction)toolbarArduinoIDEButton:(id)sender;
 
-@property (weak) IBOutlet NSToolbarItem *toolbarArduinoIDEOutlet;
+- (BOOL)validateUserInterfaceItem:(id<NSValidatedUserInterfaceItem>)item;
+@property NSImageView *imageview;
+
 
 @end
 
