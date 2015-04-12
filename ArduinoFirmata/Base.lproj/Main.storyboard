@@ -664,10 +664,16 @@
                                         <action selector="toolbarArduinoIDEButton:" target="Ld0-dV-QRU" id="AyL-kw-Eb4"/>
                                     </connections>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="3BB47E32-0395-463B-98B8-1E9A5D9BFE14" explicitItemIdentifier="toolbarbutton" label="Toolbar Item" paletteLabel="Toolbar Item" tag="-1" image="NSApplicationIcon" id="uE6-Ij-LMc">
+                                    <connections>
+                                        <action selector="toolbarArduinoIDEButton1:" target="7u4-wO-Z3M" id="B40-Uv-AbY"/>
+                                    </connections>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="Qte-8M-QkG"/>
                                 <toolbarItem reference="J8w-Xv-6Jv"/>
+                                <toolbarItem reference="uE6-Ij-LMc"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
@@ -681,6 +687,7 @@
                         <outlet property="toolbarArduinoIDEOutlet" destination="Qte-8M-QkG" id="77y-2u-X76"/>
                     </connections>
                 </customObject>
+                <customObject id="7u4-wO-Z3M" customClass="ToolbarController"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
@@ -739,6 +746,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NSApplicationIcon" width="128" height="128"/>
         <image name="arduino_icon" width="512" height="512"/>
     </resources>
 </document>

@@ -8,9 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ToolbarController : NSObject
+@interface ToolbarController : NSObject <NSUserInterfaceValidations>
 
 @property (weak) IBOutlet NSToolbarItem *toolbarArduinoIDEButton;
-- (IBAction)toolbarArduinoIDEButton:(id)sender;
+- (IBAction)toolbarArduinoIDEButton1:(id)sender;
+
+- (BOOL)validateUserInterfaceItem:(id<NSValidatedUserInterfaceItem>)toolbarbutton;
 
 @end

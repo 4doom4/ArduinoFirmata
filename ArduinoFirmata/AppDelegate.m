@@ -26,13 +26,14 @@
         [[NSWorkspace sharedWorkspace] launchApplication:[arduinoPath path]];
     }
     else {
-//        NSAlert *arduinoIDENotFound = [[NSAlert alloc]init];
-//
-//        [arduinoIDENotFound addButtonWithTitle:@"Ok"];
-//        arduinoIDENotFound.alertStyle = NSInformationalAlertStyle;
-//        arduinoIDENotFound.messageText= NSLocalizedString(@"Arduino IDE was not found", @"Try to open Arduino IDE but file not found");
-//        arduinoIDENotFound.informativeText=@"Please go to preferences and specify path";
-//        [arduinoIDENotFound runModal];
+        //        NSAlert *arduinoIDENotFound = [[NSAlert alloc]init];
+        //
+        //        [arduinoIDENotFound addButtonWithTitle:@"Ok"];
+        //        arduinoIDENotFound.alertStyle = NSInformationalAlertStyle;
+        //        arduinoIDENotFound.messageText= NSLocalizedString(@"Arduino IDE was not found", @"Try to open Arduino IDE but file not found");
+        //        arduinoIDENotFound.informativeText=@"Please go to preferences and specify path";
+        //        [arduinoIDENotFound runModal];
+        NSLog(@"app");
     }
 }
 
