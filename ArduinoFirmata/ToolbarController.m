@@ -1,16 +1,14 @@
 //
-//  AppDelegate.h
+//  ToolbarController.m
 //  ArduinoFirmata
 //
 //  Created by Maximilian Ebert on 2015-04-11.
 //  Copyright (c) 2015 Maximilian Ebert. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "ToolbarController.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@implementation ToolbarController
 
-- (IBAction)test:(id)sender;
 
 @end
-

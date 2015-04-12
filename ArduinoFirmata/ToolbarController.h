@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ToolbarController.h
 //  ArduinoFirmata
 //
 //  Created by Maximilian Ebert on 2015-04-11.
@@ -8,9 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface ToolbarController : NSObject
 
-- (IBAction)test:(id)sender;
 
 @end
-

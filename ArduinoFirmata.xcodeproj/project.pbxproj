@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91D7E0FF1ADA12C4001FED26 /* arduino_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 91D7E0FE1ADA12C4001FED26 /* arduino_icon.icns */; };
+		91D7E1031ADA132F001FED26 /* ToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D7E1021ADA132F001FED26 /* ToolbarController.m */; };
 		91F1F20A1ADA0B8900BC4F94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F1F2091ADA0B8900BC4F94 /* AppDelegate.m */; };
 		91F1F20C1ADA0B8900BC4F94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F1F20B1ADA0B8900BC4F94 /* main.m */; };
 		91F1F20F1ADA0B8900BC4F94 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F1F20E1ADA0B8900BC4F94 /* ViewController.m */; };
 		91F1F2111ADA0B8900BC4F94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F1F2101ADA0B8900BC4F94 /* Images.xcassets */; };
 		91F1F2141ADA0B8900BC4F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F1F2121ADA0B8900BC4F94 /* Main.storyboard */; };
 		91F1F2201ADA0B8900BC4F94 /* ArduinoFirmataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F1F21F1ADA0B8900BC4F94 /* ArduinoFirmataTests.m */; };
+		91F1F22B1ADA0E5400BC4F94 /* SerialConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 91F1F22A1ADA0E5400BC4F94 /* SerialConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91D7E0FE1ADA12C4001FED26 /* arduino_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = arduino_icon.icns; path = ArduinoFirmata/arduino_icon.icns; sourceTree = "<group>"; };
+		91D7E1011ADA132F001FED26 /* ToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarController.h; sourceTree = "<group>"; };
+		91D7E1021ADA132F001FED26 /* ToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarController.m; sourceTree = "<group>"; };
 		91F1F2031ADA0B8900BC4F94 /* ArduinoFirmata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArduinoFirmata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F1F2071ADA0B8900BC4F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91F1F2081ADA0B8900BC4F94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,6 +44,8 @@
 		91F1F2191ADA0B8900BC4F94 /* ArduinoFirmataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArduinoFirmataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F1F21E1ADA0B8900BC4F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91F1F21F1ADA0B8900BC4F94 /* ArduinoFirmataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArduinoFirmataTests.m; sourceTree = "<group>"; };
+		91F1F2291ADA0E5400BC4F94 /* SerialConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialConnection.h; sourceTree = "<group>"; };
+		91F1F22A1ADA0E5400BC4F94 /* SerialConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialConnection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91D7E1001ADA12D9001FED26 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				91D7E0FE1ADA12C4001FED26 /* arduino_icon.icns */,
+			);
+			name = Images;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		91F1F1FA1ADA0B8900BC4F94 = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +96,17 @@
 		91F1F2051ADA0B8900BC4F94 /* ArduinoFirmata */ = {
 			isa = PBXGroup;
 			children = (
+				91D7E1001ADA12D9001FED26 /* Images */,
 				91F1F2081ADA0B8900BC4F94 /* AppDelegate.h */,
 				91F1F2091ADA0B8900BC4F94 /* AppDelegate.m */,
 				91F1F20D1ADA0B8900BC4F94 /* ViewController.h */,
 				91F1F20E1ADA0B8900BC4F94 /* ViewController.m */,
 				91F1F2101ADA0B8900BC4F94 /* Images.xcassets */,
 				91F1F2121ADA0B8900BC4F94 /* Main.storyboard */,
+				91D7E1011ADA132F001FED26 /* ToolbarController.h */,
+				91D7E1021ADA132F001FED26 /* ToolbarController.m */,
+				91F1F2291ADA0E5400BC4F94 /* SerialConnection.h */,
+				91F1F22A1ADA0E5400BC4F94 /* SerialConnection.m */,
 				91F1F2061ADA0B8900BC4F94 /* Supporting Files */,
 			);
 			path = ArduinoFirmata;
@@ -196,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D7E0FF1ADA12C4001FED26 /* arduino_icon.icns in Resources */,
 				91F1F2111ADA0B8900BC4F94 /* Images.xcassets in Resources */,
 				91F1F2141ADA0B8900BC4F94 /* Main.storyboard in Resources */,
 			);
@@ -215,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91D7E1031ADA132F001FED26 /* ToolbarController.m in Sources */,
 				91F1F20F1ADA0B8900BC4F94 /* ViewController.m in Sources */,
+				91F1F22B1ADA0E5400BC4F94 /* SerialConnection.m in Sources */,
 				91F1F20C1ADA0B8900BC4F94 /* main.m in Sources */,
 				91F1F20A1ADA0B8900BC4F94 /* AppDelegate.m in Sources */,
 			);
@@ -407,6 +432,7 @@
 				91F1F2251ADA0B8900BC4F94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91F1F2261ADA0B8900BC4F94 /* Build configuration list for PBXNativeTarget "ArduinoFirmataTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +441,7 @@
 				91F1F2281ADA0B8900BC4F94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
