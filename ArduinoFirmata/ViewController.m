@@ -51,6 +51,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Definition of the class arrays. Do not forget to set the tag in SB!!
     // Which ports of Arduino UNO provide 8bit PWM output
     _portWithPMW= [[NSArray alloc] initWithObjects: @3, @5, @6, @9, @10, @11, nil];
     
