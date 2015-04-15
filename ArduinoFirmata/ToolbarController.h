@@ -9,10 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface ToolbarController : NSObject <NSUserInterfaceValidations>
-
-- (IBAction)randomToolbarItem:(id)sender;
-
-- (BOOL)validateUserInterfaceItem:(id<NSValidatedUserInterfaceItem>)item;
+@interface ToolbarController : NSWindowController
+- (IBAction)arduinoIDEToolbarAction:(id)sender;
 
 @end
