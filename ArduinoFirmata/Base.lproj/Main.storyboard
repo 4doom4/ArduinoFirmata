@@ -654,7 +654,7 @@
         <scene sceneID="AZm-ib-0cj">
             <objects>
                 <customObject id="5Vv-9i-ZqU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <windowController id="6F0-io-8Xz" sceneMemberID="viewController">
+                <windowController id="6F0-io-8Xz" customClass="PreferencesController" sceneMemberID="viewController">
                     <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Jyu-zt-8co">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -664,7 +664,12 @@
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="ZXX-Uh-CNr"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="NMt-NM-dSA"/>
-                                <toolbarItem implicitItemIdentifier="451F6E96-3D5E-455E-9A48-11B47CD056EA" label="General" paletteLabel="General" tag="-1" image="NSPreferencesGeneral" id="eP0-q8-CEL"/>
+                                <toolbarItem implicitItemIdentifier="451F6E96-3D5E-455E-9A48-11B47CD056EA" label="General" paletteLabel="General" tag="-1" image="NSPreferencesGeneral" id="eP0-q8-CEL">
+                                    <connections>
+                                        <action selector="preferencesGeneralButton:" target="6F0-io-8Xz" id="BcM-FC-Ffj"/>
+                                        <segue destination="oW9-a2-Uak" kind="sheet" id="3e7-mm-jDe"/>
+                                    </connections>
+                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="6B1250AD-3ED4-4380-B7FF-B3CD96D37989" label="TestItem" paletteLabel="Testitem" tag="-1" image="NSAdvanced" id="jE6-l5-K3l"/>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
@@ -673,9 +678,12 @@
                                 <toolbarItem reference="jE6-l5-K3l"/>
                             </defaultToolbarItems>
                         </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="6F0-io-8Xz" id="5Wh-p2-okC"/>
+                        </connections>
                     </window>
                     <connections>
-                        <segue destination="oW9-a2-Uak" kind="relationship" relationship="window.shadowedContentViewController" id="KvD-UC-gUw"/>
+                        <segue destination="oW9-a2-Uak" kind="relationship" relationship="window.shadowedContentViewController" id="y01-ye-LDc"/>
                     </connections>
                 </windowController>
             </objects>
@@ -684,7 +692,11 @@
         <!--View Controller-->
         <scene sceneID="b4E-F7-4r6">
             <objects>
-                <customObject id="ZGR-gz-VGw" customClass="AppDelegate"/>
+                <customObject id="ZGR-gz-VGw" customClass="PreferencesController">
+                    <connections>
+                        <outlet property="pathControlToArduinoIDE" destination="P37-cD-OuV" id="Vnu-VH-gPL"/>
+                    </connections>
+                </customObject>
                 <customObject id="QrG-XM-a9n" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="oW9-a2-Uak" sceneMemberID="viewController">
                     <view key="view" id="5iZ-C5-nlN">
@@ -699,34 +711,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPa-gy-Spk">
-                                <rect key="frame" x="104" y="226" width="100" height="26"/>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="7IS-Mp-lRg">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="a7z-dm-ldy">
-                                        <items>
-                                            <menuItem title="Default" id="cNq-Nu-kQk">
-                                                <modifierMask key="keyEquivalentModifierMask"/>
-                                            </menuItem>
-                                            <menuItem title="Custom" id="wcQ-ma-14D"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                            </popUpButton>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wS3-1a-dMc">
-                                <rect key="frame" x="209" y="230" width="258" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="bN4-oL-4IH">
+                            <pathControl focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P37-cD-OuV">
+                                <rect key="frame" x="106" y="229" width="355" height="26"/>
+                                <pathCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" pathStyle="popUp" id="9vT-cP-p2P">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P37-cD-OuV">
-                                <rect key="frame" x="106" y="200" width="355" height="22"/>
-                                <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="9vT-cP-p2P">
-                                    <font key="font" metaFont="system"/>
-                                    <url key="url" string="file:///Applications/Arduino.app/"/>
+                                    <url key="url" string="file:///Applications/"/>
                                 </pathCell>
                             </pathControl>
                         </subviews>
@@ -2323,4 +2312,7 @@
         <image name="NSPreferencesGeneral" width="32" height="32"/>
         <image name="arduino_icon" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="y01-ye-LDc"/>
+    </inferredMetricsTieBreakers>
 </document>

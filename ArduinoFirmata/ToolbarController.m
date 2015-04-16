@@ -11,14 +11,18 @@
 @implementation ToolbarController
 
 - (IBAction)arduinoIDEToolbarAction:(id)sender {
+    // Create the FileManage
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
-    NSURL *applicationsFolder = [fileManager URLForDirectory:NSApplicationDirectory inDomain:NSSystemDomainMask appropriateForURL:nil create:NO error:nil];
+    // Retrieve the Arduino IDE path and set it to an NSURL
+    NSURL *arduinoIDEPath = NULL;
+    NSData *theArduinoIDEPathData=[[NSUserDefaults standardUserDefaults] dataForKey:@"arduinoIDEPath"];
+    if (theArduinoIDEPathData != nil)
+        arduinoIDEPath =(NSURL *)[NSUnarchiver unarchiveObjectWithData:theArduinoIDEPathData];
     
-    NSURL *arduinoPath = [applicationsFolder URLByAppendingPathComponent:@"Arduino.aspp"];
-    
-    if ([fileManager fileExistsAtPath:[arduinoPath path]]) {
-        [[NSWorkspace sharedWorkspace] launchApplication:[arduinoPath path]];
+    // Check if the executable exists. If not show sheet
+    if ([fileManager fileExistsAtPath:[arduinoIDEPath path]]) {
+        [[NSWorkspace sharedWorkspace] launchApplication:[arduinoIDEPath path]];
     }
     else {
         NSAlert *arduinoIDENotFound = [[NSAlert alloc]init];
@@ -29,6 +33,5 @@
         [arduinoIDENotFound beginSheetModalForWindow:self.window completionHandler:nil];
     }
     
-    self.window.contentViewController.
 }
 @end

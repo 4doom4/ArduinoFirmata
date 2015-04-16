@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9114DF3F1ADF3542009207C8 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9114DF3E1ADF3542009207C8 /* PreferencesController.m */; };
 		91D7E0FF1ADA12C4001FED26 /* arduino_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 91D7E0FE1ADA12C4001FED26 /* arduino_icon.icns */; };
 		91D7E1031ADA132F001FED26 /* ToolbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D7E1021ADA132F001FED26 /* ToolbarController.m */; };
 		91DBE6F61ADA30E80041A3B7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91DBE6F51ADA30E80041A3B7 /* Localizable.strings */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9114DF3D1ADF3542009207C8 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
+		9114DF3E1ADF3542009207C8 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		91D7E0FE1ADA12C4001FED26 /* arduino_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = arduino_icon.icns; path = ArduinoFirmata/arduino_icon.icns; sourceTree = "<group>"; };
 		91D7E1011ADA132F001FED26 /* ToolbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarController.h; sourceTree = "<group>"; };
 		91D7E1021ADA132F001FED26 /* ToolbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarController.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 				91F1F2121ADA0B8900BC4F94 /* Main.storyboard */,
 				91D7E1011ADA132F001FED26 /* ToolbarController.h */,
 				91D7E1021ADA132F001FED26 /* ToolbarController.m */,
+				9114DF3D1ADF3542009207C8 /* PreferencesController.h */,
+				9114DF3E1ADF3542009207C8 /* PreferencesController.m */,
 				91F1F2291ADA0E5400BC4F94 /* SerialConnection.h */,
 				91F1F22A1ADA0E5400BC4F94 /* SerialConnection.m */,
 				91F1F2061ADA0B8900BC4F94 /* Supporting Files */,
@@ -247,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9114DF3F1ADF3542009207C8 /* PreferencesController.m in Sources */,
 				91D7E1031ADA132F001FED26 /* ToolbarController.m in Sources */,
 				91F1F20F1ADA0B8900BC4F94 /* ViewController.m in Sources */,
 				91F1F22B1ADA0E5400BC4F94 /* SerialConnection.m in Sources */,
