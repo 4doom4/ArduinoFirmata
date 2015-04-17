@@ -9,6 +9,13 @@
 #import <Cocoa/Cocoa.h>
 
 @interface PreferencesController : NSWindowController <NSWindowDelegate>
-@property (weak) IBOutlet NSPathControl *pathControlToArduinoIDE;
+
+
+@property (weak) IBOutlet NSView *preferenceMainView;
+@property (weak) IBOutlet   NSView *applicationSelectorCustomView;
+
+- (void) selectApplication:(id)sender;
+- (void) buildMenu: (NSURL *) appURL;
+
 
 @end

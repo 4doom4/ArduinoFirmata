@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
     </dependencies>
@@ -694,7 +694,8 @@
             <objects>
                 <customObject id="ZGR-gz-VGw" customClass="PreferencesController">
                     <connections>
-                        <outlet property="pathControlToArduinoIDE" destination="P37-cD-OuV" id="Vnu-VH-gPL"/>
+                        <outlet property="applicationSelectorCustomView" destination="3qC-aD-ACd" id="dOt-Zb-fy8"/>
+                        <outlet property="preferenceMainView" destination="5iZ-C5-nlN" id="Qhu-Yv-l06"/>
                     </connections>
                 </customObject>
                 <customObject id="QrG-XM-a9n" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -711,13 +712,9 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <pathControl focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P37-cD-OuV">
-                                <rect key="frame" x="106" y="229" width="355" height="26"/>
-                                <pathCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" pathStyle="popUp" id="9vT-cP-p2P">
-                                    <font key="font" metaFont="system"/>
-                                    <url key="url" string="file:///Applications/"/>
-                                </pathCell>
-                            </pathControl>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3qC-aD-ACd">
+                                <rect key="frame" x="100" y="231" width="163" height="21"/>
+                            </customView>
                         </subviews>
                     </view>
                 </viewController>
